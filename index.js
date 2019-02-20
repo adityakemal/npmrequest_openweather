@@ -3,7 +3,7 @@ const request = require('request')
 require('dotenv').config()
 
 var city = 'london'
-// var key = '6f969091d7cb34135df463e4c0cd1a40'
+// var key = '6f969091d7cb34135df463e4c0cd1a40' //name default in open weather site
 //KEY NYA DI SIMPEN DI FILE .env
 var key = process.env.WEATHER_API_KEY //name : bismillah in account open wether
 
