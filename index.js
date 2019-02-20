@@ -1,11 +1,13 @@
 //cara install request yaitu npm install request --save
 const request = require('request')
-var kota = 'london'
-// var key = '6f969091d7cb34135df463e4c0cd1a40'
-var key = 'eba413aa101112cf7f8908f31d551189' //name : bismillah in account open wether
-//
+require('dotenv').config()
 
-var url = `http://api.openweathermap.org/data/2.5/weather?q=${kota},uk&APPID=${key}`
+var city = 'london'
+// var key = '6f969091d7cb34135df463e4c0cd1a40'
+//KEY NYA DI SIMPEN DI FILE .env
+var key = process.env.WEATHER_API_KEY //name : bismillah in account open wether
+
+var url = `http://api.openweathermap.org/data/2.5/weather?q=${city},uk&APPID=${key}`
 request(url,(err,response,body)=>{
   var body = JSON.parse(body)
   // console.log(body);
